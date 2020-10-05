@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,68 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-wH-cJf">
+                                <rect key="frame" x="132.66666666666666" y="364" width="110" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Apb-Mu-U5j"/>
+                                    <constraint firstAttribute="height" constant="50" id="qGF-hB-cLK"/>
+                                </constraints>
+                                <state key="normal" title="Alert" image="PlayButton"/>
+                                <state key="highlighted" image="PlayButtonPressed"/>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdm-ub-cQ5"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ic4-Vr-887">
+                                <rect key="frame" x="0.0" y="304" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lYO-UN-2op"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyCat" translatesAutoresizingMaskIntoConstraints="NO" id="Qfd-hj-Oii">
+                                <rect key="frame" x="67.666666666666686" y="44" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qfd-hj-Oii" secondAttribute="height" multiplier="1:1" id="4kz-Dp-Xyf"/>
+                                    <constraint firstAttribute="width" constant="240" id="R09-Vb-bPW"/>
+                                    <constraint firstAttribute="height" constant="240" id="e9i-9n-7qa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ic4-Vr-887" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2KW-io-Ceh"/>
+                            <constraint firstItem="Qfd-hj-Oii" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ee-xP-hgE"/>
+                            <constraint firstItem="ic4-Vr-887" firstAttribute="top" secondItem="Qfd-hj-Oii" secondAttribute="bottom" constant="20" id="Fdk-av-nud"/>
+                            <constraint firstItem="SEM-wH-cJf" firstAttribute="top" secondItem="ic4-Vr-887" secondAttribute="bottom" constant="20" id="Fpu-qp-uVo"/>
+                            <constraint firstItem="ic4-Vr-887" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jin-uM-IND"/>
+                            <constraint firstItem="Qfd-hj-Oii" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aad-zB-uag"/>
+                            <constraint firstItem="Qfd-hj-Oii" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.295567" id="jKT-pL-6H5"/>
+                            <constraint firstItem="ic4-Vr-887" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pVb-Y9-wcq"/>
+                            <constraint firstItem="SEM-wH-cJf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sLk-P5-t03"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myPet" destination="Qfd-hj-Oii" id="6Uc-mM-VYY"/>
+                        <outlet property="mylabel" destination="ic4-Vr-887" id="45a-fN-JNc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="111.57635467980296"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MyCat" width="640" height="640"/>
+        <image name="PlayButton" width="114" height="54"/>
+        <image name="PlayButtonPressed" width="114" height="54"/>
+    </resources>
 </document>
